@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5396E6329A571E4009695BD /* TopRatedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5396E6229A571E4009695BD /* TopRatedCard.swift */; };
 		E5578AEC29A48FF000640DB4 /* MoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5578AEB29A48FF000640DB4 /* MoviesApp.swift */; };
 		E5578AEE29A48FF000640DB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5578AED29A48FF000640DB4 /* ContentView.swift */; };
 		E5578AF029A48FF100640DB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5578AEF29A48FF100640DB4 /* Assets.xcassets */; };
@@ -17,7 +18,9 @@
 		E5578B0C29A48FF100640DB4 /* MoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5578B0B29A48FF100640DB4 /* MoviesUITests.swift */; };
 		E5578B0E29A48FF100640DB4 /* MoviesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5578B0D29A48FF100640DB4 /* MoviesUITestsLaunchTests.swift */; };
 		E5578B1C29A4964400640DB4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5578B1B29A4964400640DB4 /* HomeView.swift */; };
-		E5578B1E29A4965100640DB4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5578B1D29A4965100640DB4 /* HomeViewModel.swift */; };
+		E56C522629A6C6BC0008EB0B /* Caravel in Frameworks */ = {isa = PBXBuildFile; productRef = E56C522529A6C6BC0008EB0B /* Caravel */; };
+		E56C522A29A6C6F90008EB0B /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C522929A6C6F90008EB0B /* HomeService.swift */; };
+		E56C522E29A6C8720008EB0B /* MoviesEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C522D29A6C8720008EB0B /* MoviesEndpointProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E5396E6229A571E4009695BD /* TopRatedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedCard.swift; sourceTree = "<group>"; };
 		E5578AE829A48FF000640DB4 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5578AEB29A48FF000640DB4 /* MoviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesApp.swift; sourceTree = "<group>"; };
 		E5578AED29A48FF000640DB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,7 +55,8 @@
 		E5578B0B29A48FF100640DB4 /* MoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITests.swift; sourceTree = "<group>"; };
 		E5578B0D29A48FF100640DB4 /* MoviesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E5578B1B29A4964400640DB4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		E5578B1D29A4965100640DB4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E56C522929A6C6F90008EB0B /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		E56C522D29A6C8720008EB0B /* MoviesEndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesEndpointProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56C522629A6C6BC0008EB0B /* Caravel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5396E6129A571D0009695BD /* components */ = {
+			isa = PBXGroup;
+			children = (
+				E5396E6229A571E4009695BD /* TopRatedCard.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		E5578ADF29A48FF000640DB4 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +116,7 @@
 		E5578AEA29A48FF000640DB4 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				E56C522B29A6C8580008EB0B /* Platform */,
 				E5578B1A29A4962E00640DB4 /* Home */,
 				E5578AEB29A48FF000640DB4 /* MoviesApp.swift */,
 				E5578AED29A48FF000640DB4 /* ContentView.swift */,
@@ -141,10 +156,43 @@
 		E5578B1A29A4962E00640DB4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E56C522729A6C6E60008EB0B /* Data */,
+				E5396E6129A571D0009695BD /* components */,
 				E5578B1B29A4964400640DB4 /* HomeView.swift */,
-				E5578B1D29A4965100640DB4 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		E56C522729A6C6E60008EB0B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E56C522829A6C6ED0008EB0B /* Service */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E56C522829A6C6ED0008EB0B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E56C522929A6C6F90008EB0B /* HomeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E56C522B29A6C8580008EB0B /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				E56C522C29A6C85E0008EB0B /* Networking */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		E56C522C29A6C85E0008EB0B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E56C522D29A6C8720008EB0B /* MoviesEndpointProtocol.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +211,9 @@
 			dependencies = (
 			);
 			name = Movies;
+			packageProductDependencies = (
+				E56C522529A6C6BC0008EB0B /* Caravel */,
+			);
 			productName = Movies;
 			productReference = E5578AE829A48FF000640DB4 /* Movies.app */;
 			productType = "com.apple.product-type.application";
@@ -235,6 +286,9 @@
 				Base,
 			);
 			mainGroup = E5578ADF29A48FF000640DB4;
+			packageReferences = (
+				E56C522429A6C6BC0008EB0B /* XCRemoteSwiftPackageReference "Caravel" */,
+			);
 			productRefGroup = E5578AE929A48FF000640DB4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,10 +331,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56C522A29A6C6F90008EB0B /* HomeService.swift in Sources */,
+				E5396E6329A571E4009695BD /* TopRatedCard.swift in Sources */,
 				E5578AF529A48FF100640DB4 /* Persistence.swift in Sources */,
-				E5578B1E29A4965100640DB4 /* HomeViewModel.swift in Sources */,
 				E5578AEE29A48FF000640DB4 /* ContentView.swift in Sources */,
 				E5578AF829A48FF100640DB4 /* Movies.xcdatamodeld in Sources */,
+				E56C522E29A6C8720008EB0B /* MoviesEndpointProtocol.swift in Sources */,
 				E5578B1C29A4964400640DB4 /* HomeView.swift in Sources */,
 				E5578AEC29A48FF000640DB4 /* MoviesApp.swift in Sources */,
 			);
@@ -607,6 +663,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E56C522429A6C6BC0008EB0B /* XCRemoteSwiftPackageReference "Caravel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alaksion/Caravel";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E56C522529A6C6BC0008EB0B /* Caravel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E56C522429A6C6BC0008EB0B /* XCRemoteSwiftPackageReference "Caravel" */;
+			productName = Caravel;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E5578AF629A48FF100640DB4 /* Movies.xcdatamodeld */ = {

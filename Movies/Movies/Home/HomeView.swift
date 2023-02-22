@@ -11,10 +11,14 @@ import SwiftUI
 struct HomeView: View {
     
     var body: some View {
-        VStack {
-            Text("Hello World")
-            Spacer()
-            Text("More Text Here")
+        ScrollView {
+                LazyHStack(alignment: .center) {
+                    ForEach(1...10, id: \.self) { id in
+                        TopRatedCard(
+                            id % 2 == 0 ? Color.red : Color.orange
+                        )
+                    }
+                }
         }
     }
 }

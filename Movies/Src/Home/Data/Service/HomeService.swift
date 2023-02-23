@@ -36,8 +36,7 @@ extension HomeService : MoviesEndpointProtocol {
     var queries: [String : String] {
         // Add API_KEY to every request query map.
         var queryMap: [String: String] = [:]
-        queryMap["api_key"] = "b41d9e40620cd3ce3284398b83fa88e7"
-        
+        queryMap["api_key"] = Bundle.main.infoDictionary?["Api Key"] as? String
         return queryMap
     }
     

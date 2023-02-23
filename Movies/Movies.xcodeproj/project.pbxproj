@@ -19,6 +19,9 @@
 		E56C522629A6C6BC0008EB0B /* Caravel in Frameworks */ = {isa = PBXBuildFile; productRef = E56C522529A6C6BC0008EB0B /* Caravel */; };
 		E56C522A29A6C6F90008EB0B /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C522929A6C6F90008EB0B /* HomeService.swift */; };
 		E56C522E29A6C8720008EB0B /* MoviesEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C522D29A6C8720008EB0B /* MoviesEndpointProtocol.swift */; };
+		E56C523429A738C40008EB0B /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C523329A738C40008EB0B /* MovieModel.swift */; };
+		E56C523729A7398C0008EB0B /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C523629A7398C0008EB0B /* HomeRepository.swift */; };
+		E56C523B29A739CA0008EB0B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C523A29A739CA0008EB0B /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		E5578B1B29A4964400640DB4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E56C522929A6C6F90008EB0B /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		E56C522D29A6C8720008EB0B /* MoviesEndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesEndpointProtocol.swift; sourceTree = "<group>"; };
+		E56C523329A738C40008EB0B /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		E56C523629A7398C0008EB0B /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		E56C523A29A739CA0008EB0B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,7 @@
 		E5578B1A29A4962E00640DB4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E56C523829A739BC0008EB0B /* Domain */,
 				E56C523129A6D02C0008EB0B /* Presentation */,
 				E56C522729A6C6E60008EB0B /* Data */,
 			);
@@ -159,6 +166,8 @@
 		E56C522729A6C6E60008EB0B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E56C523529A7397C0008EB0B /* Repository */,
+				E56C523229A738B70008EB0B /* Model */,
 				E56C522829A6C6ED0008EB0B /* Service */,
 			);
 			path = Data;
@@ -195,6 +204,38 @@
 				E5396E6129A571D0009695BD /* components */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E56C523229A738B70008EB0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E56C523329A738C40008EB0B /* MovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E56C523529A7397C0008EB0B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E56C523629A7398C0008EB0B /* HomeRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		E56C523829A739BC0008EB0B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E56C523929A739C00008EB0B /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E56C523929A739C00008EB0B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E56C523A29A739CA0008EB0B /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +374,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56C523729A7398C0008EB0B /* HomeRepository.swift in Sources */,
+				E56C523429A738C40008EB0B /* MovieModel.swift in Sources */,
+				E56C523B29A739CA0008EB0B /* Movie.swift in Sources */,
 				E56C522A29A6C6F90008EB0B /* HomeService.swift in Sources */,
 				E5396E6329A571E4009695BD /* TopRatedCard.swift in Sources */,
 				E5578AF829A48FF100640DB4 /* Movies.xcdatamodeld in Sources */,

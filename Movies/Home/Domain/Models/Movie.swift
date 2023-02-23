@@ -13,6 +13,6 @@ struct Movie {
     
     init(from movieModel : MovieModel) {
         self.id = movieModel.id
-        self.posterPath = movieModel.posterPath
+        self.posterPath = ImagePathMapper.buildFilepath(imagePath: movieModel.posterPath)
     }
 }

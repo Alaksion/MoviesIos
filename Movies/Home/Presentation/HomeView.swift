@@ -7,8 +7,11 @@
 
 import Foundation
 import SwiftUI
+import Caravel
 
 struct HomeView: View {
+    
+    private let repository = HomeRepository(client: HttpClient.instance)
     
     var body: some View {
         ScrollView {
@@ -19,6 +22,11 @@ struct HomeView: View {
                         )
                     }
                 }
+        }.onAppear {
+            Task {
+                let data = await repository.getPopularMovies()
+                debugPrint(data)
+            }
         }
     }
 }

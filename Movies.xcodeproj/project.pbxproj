@@ -22,6 +22,7 @@
 		E56C523429A738C40008EB0B /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C523329A738C40008EB0B /* MovieModel.swift */; };
 		E56C523729A7398C0008EB0B /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C523629A7398C0008EB0B /* HomeRepository.swift */; };
 		E56C523B29A739CA0008EB0B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C523A29A739CA0008EB0B /* Movie.swift */; };
+		E56C523E29A73F6E0008EB0B /* ImagePathMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56C523D29A73F6E0008EB0B /* ImagePathMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		E56C523329A738C40008EB0B /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		E56C523629A7398C0008EB0B /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		E56C523A29A739CA0008EB0B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E56C523D29A73F6E0008EB0B /* ImagePathMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePathMapper.swift; sourceTree = "<group>"; };
+		E56C523F29A741260008EB0B /* AppConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppConfig.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 		E5578ADF29A48FF000640DB4 = {
 			isa = PBXGroup;
 			children = (
+				E56C523F29A741260008EB0B /* AppConfig.xcconfig */,
 				E5578AEA29A48FF000640DB4 /* Movies */,
 				E5578B0029A48FF100640DB4 /* MoviesTests */,
 				E5578B0A29A48FF100640DB4 /* MoviesUITests */,
@@ -193,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				E56C522D29A6C8720008EB0B /* MoviesEndpointProtocol.swift */,
+				E56C523D29A73F6E0008EB0B /* ImagePathMapper.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 				E56C522E29A6C8720008EB0B /* MoviesEndpointProtocol.swift in Sources */,
 				E5578B1C29A4964400640DB4 /* HomeView.swift in Sources */,
 				E5578AEC29A48FF000640DB4 /* MoviesApp.swift in Sources */,
+				E56C523E29A73F6E0008EB0B /* ImagePathMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

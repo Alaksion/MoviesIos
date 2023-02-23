@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "caravel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alaksion/Caravel",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ae5e05f2caa63a1da032d7accdfd5d99455bf8a3"
+      }
+    }
+  ],
+  "version" : 2
+}

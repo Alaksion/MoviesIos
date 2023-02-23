@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct MovieListModel: Decodable {
+    let page: Int
+    let results: [MovieModel]
+}
+
 struct MovieModel: Decodable {
     let id: Int
     let posterPath: String

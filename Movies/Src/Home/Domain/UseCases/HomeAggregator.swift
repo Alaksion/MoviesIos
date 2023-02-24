@@ -21,9 +21,9 @@ struct HomeAggregator : HomeAggregatorProtocol {
     }
     
     func loadAggregatedData() async throws -> AggregatedMovies {
-        let popular  = try await repository.getPopularMovies()
-        let topRated = try await repository.getPopularMovies()
-        let nowPlaying = try await repository.getPopularMovies()
+        let popular  = try await repository.getTopRated()
+        let topRated = try await repository.getTopRated()
+        let nowPlaying = try await repository.getTopRated()
         
         return AggregatedMovies(
             topRated: topRated, popular: popular, nowPlaying: nowPlaying

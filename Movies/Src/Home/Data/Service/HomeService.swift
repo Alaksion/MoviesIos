@@ -13,7 +13,6 @@ enum HomeService {
     case popular
     case nowPlaying
     case topRated
-    
 }
 
 extension HomeService : MoviesEndpointProtocol {
@@ -23,9 +22,9 @@ extension HomeService : MoviesEndpointProtocol {
         case .popular:
             return "/movie/popular"
         case .nowPlaying:
-            return "movie/now_playing"
+            return "/movie/now_playing"
         case .topRated:
-            return "movie/top_rated"
+            return "/movie/top_rated"
         }
     }
     

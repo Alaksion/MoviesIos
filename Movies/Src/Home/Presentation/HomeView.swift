@@ -10,22 +10,24 @@ import SwiftUI
 import Caravel
 
 struct HomeView: View {
+
+    @State private var topRatedMovies: [Movie] = []
     
-    private let repository = HomeRepository(client: HttpClient.instance)
+    @ObservedObject private var model = HomeViewModel()
     
     var body: some View {
         ScrollView {
                 LazyHStack(alignment: .center) {
-                    ForEach(1...10, id: \.self) { id in
+                    ForEach(model.movies.topRated, id: \.self) { movie in
                         TopRatedCard(
-                            id % 2 == 0 ? Color.red : Color.orange
+                            Color.orange,
+                            data: movie
                         )
                     }
                 }
         }.onAppear {
-            Task {
-                let data = await repository.getPopularMovies()
-                debugPrint(data)
+            Task.init {
+                await model.loadData()
             }
         }
     }

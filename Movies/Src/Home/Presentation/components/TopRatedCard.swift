@@ -11,17 +11,27 @@ import SwiftUI
 struct TopRatedCard: View {
     
     private let background: Color
+    private let movie: Movie
     
-    init(_ color: Color) {
+    init(_ color: Color, data: Movie) {
         self.background = color
+        self.movie = data
     }
     
     var body: some View {
-        Image(systemName: "sun.max")
-            .padding(.horizontal, 80)
-            .padding(.vertical, 100)
-            .background(background)
-            .cornerRadius(10)
+        AsyncImage(
+            url: URL(string: movie.posterPath),
+            content: { image in
+                image
+                    .resizable()
+                    .scaledToFill()
+            },
+            placeholder: {
+                Color.purple
+            }
+        )
+        .frame(width: 150, height: 200)
+        .cornerRadius(20)
     }
     
 }

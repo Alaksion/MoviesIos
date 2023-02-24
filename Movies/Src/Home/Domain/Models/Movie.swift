@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Movie {
+struct Movie : Identifiable, Hashable {
     let id: Int
     let posterPath: String
     

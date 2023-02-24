@@ -9,24 +9,40 @@ import Foundation
 import Caravel
 
 protocol HomeRepositoryProtocol {
-    func getPopularMovies() async -> Result<[Movie], RequestError>
+    func getPopularMovies() async throws-> [Movie]
+    func getNowPlayingMovies() async throws-> [Movie]
+    func getTopRated() async throws-> [Movie]
 }
 
 struct HomeRepository: HomeRepositoryProtocol {
     
-    private let httpClient: HttpClientProtocol
+    private let httpClient: CaravelClient
     
-    init(client : HttpClientProtocol) {
+    init(client : CaravelClient) {
         self.httpClient = client
     }
     
-    func getPopularMovies() async -> Result<[Movie], RequestError> {
-        let data: Result<MovieListModel, RequestError> = await httpClient.sendRequest(endpoint: HomeService.popular)
+    func getPopularMovies() async throws -> [Movie] {
+        let data: MovieListModel = try await httpClient.sendRequest(data: HomeService.popular)
         
-        return handleResponse(result: data) { rawMovies in
-            rawMovies.results.map { model in
-                Movie(from: model)
-            }
+        return data.results.map { MovieModel in
+            Movie(from: MovieModel)
+        }
+    }
+    
+    func getNowPlayingMovies() async throws -> [Movie] {
+        let data: MovieListModel = try await httpClient.sendRequest(data: HomeService.nowPlaying)
+        
+        return data.results.map { MovieModel in
+            Movie(from: MovieModel)
+        }
+    }
+    
+    func getTopRated() async throws -> [Movie] {
+        let data: MovieListModel = try await httpClient.sendRequest(data: HomeService.topRated)
+        
+        return data.results.map { MovieModel in
+            Movie(from: MovieModel)
         }
     }
 }

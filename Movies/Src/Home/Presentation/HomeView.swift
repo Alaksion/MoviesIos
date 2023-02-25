@@ -16,19 +16,16 @@ struct HomeView: View {
     @ObservedObject private var model = HomeViewModel()
     
     var body: some View {
-        ScrollView {
-                LazyHStack(alignment: .center) {
-                    ForEach(model.movies.topRated, id: \.self) { movie in
-                        TopRatedCard(
-                            Color.orange,
-                            data: movie
-                        )
-                    }
+        ScrollView(.vertical) {
+            LazyVStack(spacing: 20) {
+                PopularCarrousel(data: model.movies.popular)
+                MovieCarrousel(data: model.movies.topRated, title: "Audience favorites")
+                MovieCarrousel(data: model.movies.nowPlaying, title: "Now Playing")
+            }.onAppear {
+                Task.init {
+                    await model.loadData()
                 }
-        }.onAppear {
-            Task.init {
-                await model.loadData()
-            }
+            }.padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
         }
     }
 }

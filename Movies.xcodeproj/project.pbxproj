@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E5396E6329A571E4009695BD /* TopRatedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5396E6229A571E4009695BD /* TopRatedCard.swift */; };
+		E5396E6329A571E4009695BD /* MovieCarrousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5396E6229A571E4009695BD /* MovieCarrousel.swift */; };
 		E5544CFF29A823D800F0774F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5544CFE29A823D800F0774F /* HomeViewModel.swift */; };
 		E5544D0229A895D300F0774F /* HomeAggregator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5544D0129A895D300F0774F /* HomeAggregator.swift */; };
 		E5544D0529A8961600F0774F /* AggregatedMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5544D0429A8961600F0774F /* AggregatedMovies.swift */; };
+		E5544D0729AA6C3300F0774F /* PopularCarrousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5544D0629AA6C3300F0774F /* PopularCarrousel.swift */; };
 		E5578AEC29A48FF000640DB4 /* MoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5578AEB29A48FF000640DB4 /* MoviesApp.swift */; };
 		E5578AF029A48FF100640DB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5578AEF29A48FF100640DB4 /* Assets.xcassets */; };
 		E5578AF329A48FF100640DB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5578AF229A48FF100640DB4 /* Preview Assets.xcassets */; };
@@ -46,11 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E5396E6229A571E4009695BD /* TopRatedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedCard.swift; sourceTree = "<group>"; };
+		E5396E6229A571E4009695BD /* MovieCarrousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCarrousel.swift; sourceTree = "<group>"; };
 		E5544CFB29A7441A00F0774F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E5544CFE29A823D800F0774F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E5544D0129A895D300F0774F /* HomeAggregator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAggregator.swift; sourceTree = "<group>"; };
 		E5544D0429A8961600F0774F /* AggregatedMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregatedMovies.swift; sourceTree = "<group>"; };
+		E5544D0629AA6C3300F0774F /* PopularCarrousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCarrousel.swift; sourceTree = "<group>"; };
 		E5578AE829A48FF000640DB4 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5578AEB29A48FF000640DB4 /* MoviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesApp.swift; sourceTree = "<group>"; };
 		E5578AEF29A48FF100640DB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +102,8 @@
 		E5396E6129A571D0009695BD /* components */ = {
 			isa = PBXGroup;
 			children = (
-				E5396E6229A571E4009695BD /* TopRatedCard.swift */,
+				E5396E6229A571E4009695BD /* MovieCarrousel.swift */,
+				E5544D0629AA6C3300F0774F /* PopularCarrousel.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -414,12 +417,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5544D0729AA6C3300F0774F /* PopularCarrousel.swift in Sources */,
 				E56C523729A7398C0008EB0B /* HomeRepository.swift in Sources */,
 				E5544CFF29A823D800F0774F /* HomeViewModel.swift in Sources */,
 				E56C523429A738C40008EB0B /* MovieModel.swift in Sources */,
 				E56C523B29A739CA0008EB0B /* Movie.swift in Sources */,
 				E56C522A29A6C6F90008EB0B /* HomeService.swift in Sources */,
-				E5396E6329A571E4009695BD /* TopRatedCard.swift in Sources */,
+				E5396E6329A571E4009695BD /* MovieCarrousel.swift in Sources */,
 				E5578AF829A48FF100640DB4 /* Movies.xcdatamodeld in Sources */,
 				E56C522E29A6C8720008EB0B /* MoviesEndpointProtocol.swift in Sources */,
 				E5578B1C29A4964400640DB4 /* HomeView.swift in Sources */,

@@ -11,7 +11,6 @@ import Caravel
 class HomeViewModel: ObservableObject {
     
     private let repository: HomeRepositoryProtocol
-    
     private let aggregator: HomeAggregatorProtocol
     
     init() {
@@ -20,6 +19,7 @@ class HomeViewModel: ObservableObject {
     }
     
     @Published var movies: AggregatedMovies = AggregatedMovies.empty
+    @Published var viewState: ViewState = ViewState.loading
     
     func loadData() async {
         await topRatedMovies()
@@ -29,8 +29,9 @@ class HomeViewModel: ObservableObject {
     private func topRatedMovies() async {
         do {
             movies = try await aggregator.loadAggregatedData()
+            viewState = ViewState.content
         } catch let error {
-            debugPrint(error)
+            viewState = ViewState.error(errorData: error)
         }
     }
 

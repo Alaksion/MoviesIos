@@ -22,18 +22,18 @@ class HomeViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     
     func loadData() async {
-        await topRatedMovies()
+        await loadMovies()
     }
     
     @MainActor
-    private func topRatedMovies() async {
+    private func loadMovies() async {
         do {
             isLoading = true
-            movies = try await aggregator.loadAggregatedData()
+            let response = try await aggregator.loadAggregatedData()
+            self.movies = response
         } catch let error {
             debugPrint(error)
         }
-        isLoading = false
+        self.isLoading = false
     }
-
 }

@@ -10,6 +10,10 @@ import SwiftUI
 
 struct MovieCarrousel: View {
     
+    private let cardHeight: CGFloat = 150
+    private let cardWidth: CGFloat = 100
+    private let cardRadius: CGFloat = 15
+    
     private let movies: [Movie]
     private let title: String
     private let loading: Bool
@@ -30,7 +34,11 @@ struct MovieCarrousel: View {
             ScrollView(.horizontal) {
                 LazyHStack {
                     if(loading) {
-                        LoadingView()
+                        ForEach((1...10).reversed(), id: \.self) { _ in
+                            ShimmerView()
+                                .frame(width: cardWidth, height: cardHeight)
+                                .cornerRadius(cardRadius)
+                            }
                     }
                     else {
                         ForEach(movies) { movie in
@@ -45,22 +53,12 @@ struct MovieCarrousel: View {
                                     ShimmerView()
                                 }
                             )
-                            .frame(width: 100, height: 150)
-                            .cornerRadius(15)
+                            .frame(width: cardWidth, height: cardHeight)
+                            .cornerRadius(cardRadius)
                         }
                     }
                 }
             }
         }
     }
-    
-    private struct LoadingView : View {
-        var body: some View {
-            ForEach((1...10).reversed(), id: \.self) { _ in
-                ShimmerView()
-                    .frame(width: 200, height: 300)
-                    .cornerRadius(15)
-                }
-            }
-        }
 }

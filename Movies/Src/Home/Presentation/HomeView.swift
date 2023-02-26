@@ -16,33 +16,31 @@ struct HomeView: View {
     @ObservedObject private var model = HomeViewModel()
     
     var body: some View {
-        switch(model.viewState) {
-        case .content:
-            ContentView(data: model.movies)
-        case .loading:
-            ProgressView().onAppear {
-                Task.init {
-                    await model.loadData()
-                }
+        ContentView(
+            data: model.movies,
+            loading: model.isLoading
+        ).onAppear {
+            Task {
+                await model.loadData()
             }
-        case .error(let error):
-            Spacer()
         }
     }
     
     private struct ContentView: View {
         private let state: AggregatedMovies
+        private let isLoading: Bool
         
-        init(data: AggregatedMovies) {
+        init(data: AggregatedMovies, loading: Bool) {
             self.state = data
+            self.isLoading = loading
         }
         
         var body: some View {
             ScrollView(.vertical) {
                 LazyVStack(spacing: 20) {
-                    PopularCarrousel(data: state.popular)
-                    MovieCarrousel(data: state.topRated, title: "Audience favorites")
-                    MovieCarrousel(data: state.nowPlaying, title: "Now Playing")
+                    PopularCarrousel(data: state.popular, loading: isLoading)
+                    MovieCarrousel(data: state.topRated, title: "Audience favorites", loading: isLoading)
+                    MovieCarrousel(data: state.nowPlaying, title: "Now Playing", loading: isLoading)
                 }
                 }.padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
             }

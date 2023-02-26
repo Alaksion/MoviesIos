@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E521FE0629AAF4E200553DA7 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E521FE0529AAF4E200553DA7 /* ShimmerView.swift */; };
 		E5396E6329A571E4009695BD /* MovieCarrousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5396E6229A571E4009695BD /* MovieCarrousel.swift */; };
 		E5544CFF29A823D800F0774F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5544CFE29A823D800F0774F /* HomeViewModel.swift */; };
 		E5544D0229A895D300F0774F /* HomeAggregator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5544D0129A895D300F0774F /* HomeAggregator.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E521FE0529AAF4E200553DA7 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
 		E5396E6229A571E4009695BD /* MovieCarrousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCarrousel.swift; sourceTree = "<group>"; };
 		E5544CFB29A7441A00F0774F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E5544CFE29A823D800F0774F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				E5544D0929AA70FC00F0774F /* ViewState.swift */,
+				E521FE0529AAF4E200553DA7 /* ShimmerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				E56C522E29A6C8720008EB0B /* MoviesEndpointProtocol.swift in Sources */,
 				E5578B1C29A4964400640DB4 /* HomeView.swift in Sources */,
 				E5578AEC29A48FF000640DB4 /* MoviesApp.swift in Sources */,
+				E521FE0629AAF4E200553DA7 /* ShimmerView.swift in Sources */,
 				E56C523E29A73F6E0008EB0B /* ImagePathMapper.swift in Sources */,
 				E5544D0229A895D300F0774F /* HomeAggregator.swift in Sources */,
 				E5544D0529A8961600F0774F /* AggregatedMovies.swift in Sources */,

@@ -19,7 +19,7 @@ class HomeViewModel: ObservableObject {
     }
     
     @Published var movies: AggregatedMovies = AggregatedMovies.empty
-    @Published var viewState: ViewState = ViewState.loading
+    @Published var isLoading: Bool = false
     
     func loadData() async {
         await topRatedMovies()
@@ -28,11 +28,12 @@ class HomeViewModel: ObservableObject {
     @MainActor
     private func topRatedMovies() async {
         do {
+            isLoading = true
             movies = try await aggregator.loadAggregatedData()
-            viewState = ViewState.content
         } catch let error {
-            viewState = ViewState.error(errorData: error)
+            debugPrint(error)
         }
+        isLoading = false
     }
 
 }
